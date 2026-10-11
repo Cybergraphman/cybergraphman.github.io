@@ -4,6 +4,7 @@
 
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
@@ -11,22 +12,26 @@
 
   <style>
 
+    /* CONFIGURACIÓN GENERAL */
+
     * {
       box-sizing: border-box;
     }
 
-    html, body {
+    html {
       margin: 0;
       padding: 0;
       width: 100%;
     }
 
     body {
-      background: #080d15;
-      color: white;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: #080d15;
+      color: #ffffff;
       font-family: Arial, sans-serif;
       text-align: center;
-      overflow-x: hidden;
     }
 
     /* ENCABEZADO */
@@ -38,33 +43,50 @@
     }
 
     h1 {
+      margin: 0 0 15px;
       color: #00bfff;
       letter-spacing: 3px;
-      margin: 0 0 15px;
     }
 
     p {
       color: #b5c9dc;
     }
 
-    /* PORTADA CINEMATOGRÁFICA */
+    /* PORTADA SIN RECORTES */
 
-.portada {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #00bfff;
-}
+    .contenedor-portada {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      line-height: 0;
+      border-bottom: 1px solid #00bfff;
+    }
 
-    /* CONTENIDO */
+    .portada {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* CONTENIDO PRINCIPAL */
 
     main {
+      width: 100%;
       padding: 30px 20px;
+    }
+
+    main h2 {
+      color: #ffffff;
     }
 
     /* REPRODUCTOR DE AUDIO */
 
     .audio-section {
+      width: 100%;
       padding: 20px 20px 50px;
       text-align: center;
     }
@@ -81,7 +103,7 @@
       margin: 20px auto;
     }
 
-    /* ADAPTACIÓN PARA TELÉFONOS */
+    /* VERSIÓN PARA TELÉFONOS */
 
     @media (max-width: 767px) {
 
@@ -94,8 +116,21 @@
         letter-spacing: 2px;
       }
 
+      .contenedor-portada {
+        width: 100%;
+      }
+
+      .portada {
+        width: 100%;
+        height: auto;
+      }
+
       main {
         padding: 25px 15px;
+      }
+
+      .audio-section {
+        padding: 20px 15px 40px;
       }
 
     }
@@ -108,31 +143,39 @@
   <!-- ENCABEZADO -->
 
   <header>
+
     <h1>CYBERGRAPHMAN</h1>
+
     <p>
       Graphic Design | Cybersecurity | Quality Control
     </p>
+
   </header>
 
-  <!-- PORTADA -->
+  <!-- PORTADA COMPLETA SIN RECORTES -->
 
-  <picture>
+  <picture class="contenedor-portada">
+
     <img
       class="portada"
       src="imagen/cybergraphman-regenerado.png"
-      alt="Cybergraphman">
+      alt="Cybergraphman - Centro de ciberseguridad">
+
   </picture>
 
-  <!-- CONTENIDO PRINCIPAL -->
+  <!-- BIENVENIDA -->
 
   <main>
+
     <h2>Welcome to Cybergraphman</h2>
+
     <p>
       Documentation | Research | Education
     </p>
+
   </main>
 
-  <!-- REPRODUCTOR MP3 -->
+  <!-- REPRODUCTOR DE AUDIO -->
 
   <section class="audio-section">
 
@@ -141,11 +184,13 @@
     <p>Official Audio Experience</p>
 
     <audio controls preload="metadata">
+
       <source
         src="audio/cybergraphman.mp3"
         type="audio/mpeg">
 
       Tu navegador no admite audio HTML5.
+
     </audio>
 
   </section>
