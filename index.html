@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
+
   <title>Cybergraphman | Official Website</title>
 
   <style>
@@ -29,35 +30,41 @@
     p {
       color: #b5c9dc;
     }
+
+    .portada {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    main {
+      padding: 30px 20px;
+    }
   </style>
 </head>
 
 <body>
+
   <header>
     <h1>CYBERGRAPHMAN</h1>
     <p>Graphic Design | Cybersecurity | Quality Control</p>
   </header>
 
+  <picture>
+    <source
+      media="(max-width: 767px)"
+      srcset="imagen/portada-movil.webp">
+
+    <img
+      class="portada"
+      src="imagen/portada-pc.webp"
+      alt="Cybergraphman">
+  </picture>
+
   <main>
     <h2>Welcome to Cybergraphman</h2>
     <p>Documentation | Research | Education</p>
   </main>
+
 </body>
 </html>
-
-<main>
-    <h2>Welcome to Cybergraphman</h2>
-    <p>Documentation | Research | Education</p>
-</main>
-
-
-<picture>
-  <source
-    media="(max-width: 767px)"
-    srcset="imagen/portada-movil.webp">
-
-  <img
-    src="imagen/portada-pc.webp"
-    alt="Cybergraphman"
-    style="width:100%; height:auto; display:block;">
-</picture>
