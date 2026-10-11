@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
@@ -9,15 +10,29 @@
   <title>Cybergraphman | Official Website</title>
 
   <style>
-    body {
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
       margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    body {
       background: #080d15;
       color: white;
       font-family: Arial, sans-serif;
       text-align: center;
+      overflow-x: hidden;
     }
 
+    /* ENCABEZADO */
+
     header {
+      width: 100%;
       padding: 40px 20px;
       border-bottom: 1px solid #00bfff;
     }
@@ -25,83 +40,122 @@
     h1 {
       color: #00bfff;
       letter-spacing: 3px;
+      margin: 0 0 15px;
     }
 
     p {
       color: #b5c9dc;
     }
 
-.portada {
-  display: block;
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  object-position: center center;
-  border-bottom: 1px solid #00bfff;
-  box-sizing: border-box;
-}
+    /* PORTADA CINEMATOGRÁFICA */
 
-@media (max-width: 767px) {
-  .portada {
-    height: 280px;
-    object-position: 75% center;
-  }
-}
+    .portada {
+      display: block;
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      object-position: center center;
+      border-bottom: 1px solid #00bfff;
+    }
+
+    /* CONTENIDO */
 
     main {
       padding: 30px 20px;
     }
-    
-.audio-section {
-  padding: 30px 20px;
-  text-align: center;
-}
 
-.audio-section h2 {
-  color: #00bfff;
-  letter-spacing: 2px;
-}
+    /* REPRODUCTOR DE AUDIO */
 
-.audio-section audio {
-  display: block;
-  width: 100%;
-  max-width: 450px;
-  margin: 20px auto;
-}
+    .audio-section {
+      padding: 20px 20px 50px;
+      text-align: center;
+    }
+
+    .audio-section h2 {
+      color: #00bfff;
+      letter-spacing: 2px;
+    }
+
+    .audio-section audio {
+      display: block;
+      width: 100%;
+      max-width: 450px;
+      margin: 20px auto;
+    }
+
+    /* ADAPTACIÓN PARA TELÉFONOS */
+
+    @media (max-width: 767px) {
+
+      header {
+        padding: 30px 15px;
+      }
+
+      h1 {
+        font-size: 26px;
+        letter-spacing: 2px;
+      }
+
+      .portada {
+        height: 280px;
+        object-position: 75% center;
+      }
+
+      main {
+        padding: 25px 15px;
+      }
+
+    }
 
   </style>
 </head>
 
 <body>
 
+  <!-- ENCABEZADO -->
+
   <header>
     <h1>CYBERGRAPHMAN</h1>
-    <p>Graphic Design | Cybersecurity | Quality Control</p>
+    <p>
+      Graphic Design | Cybersecurity | Quality Control
+    </p>
   </header>
 
+  <!-- PORTADA -->
+
   <picture>
-  <img
-    class="portada"
-    src="imagen/cybergraphman-regenerado.png"
-    alt="Cybergraphman">
-</picture>
+    <img
+      class="portada"
+      src="imagen/cybergraphman-regenerado.png"
+      alt="Cybergraphman">
+  </picture>
+
+  <!-- CONTENIDO PRINCIPAL -->
 
   <main>
     <h2>Welcome to Cybergraphman</h2>
-    <p>Documentation | Research | Education</p>
+    <p>
+      Documentation | Research | Education
+    </p>
   </main>
 
-<section class="audio-section">
-  <h2>CYBERGRAPHMAN AUDIO</h2>
-  <p>Official Audio Experience</p>
+  <!-- REPRODUCTOR MP3 -->
 
-  <audio controls preload="metadata">
-    <source
-      src="audio/cybergraphman.mp3"
-      type="audio/mpeg">
-    Tu navegador no admite audio HTML5.
-  </audio>
-</section>
+  <section class="audio-section">
+
+    <h2>CYBERGRAPHMAN AUDIO</h2>
+
+    <p>Official Audio Experience</p>
+
+    <audio controls preload="metadata">
+      <source
+        src="audio/cybergraphman.mp3"
+        type="audio/mpeg">
+
+      Tu navegador no admite audio HTML5.
+    </audio>
+
+  </section>
 
 </body>
 </html>
