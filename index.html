@@ -3,7 +3,9 @@
 <html lang="es">
 
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
@@ -11,18 +13,21 @@
 
   <style>
 
+    /* CONFIGURACIÓN GENERAL */
+
     * {
       box-sizing: border-box;
     }
 
-    html, body {
+    html,
+    body {
+      width: 100%;
       margin: 0;
       padding: 0;
-      width: 100%;
     }
 
     body {
-      background: #080d15;
+      background-color: #080d15;
       color: #ffffff;
       font-family: Arial, sans-serif;
       text-align: center;
@@ -47,54 +52,42 @@
       color: #b5c9dc;
     }
 
-    /* PORTADA PANORÁMICA SIN RECORTAR LA FOTO */
+    /* PORTADA PANORÁMICA */
 
     .contenedor-portada {
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 100%;
       height: 350px;
       overflow: hidden;
       border-bottom: 1px solid #00bfff;
-      background: #080d15;
+      background-color: #080d15;
     }
-
-    /* Fondo desenfocado para llenar el espacio */
-
-    .contenedor-portada::before {
-      content: "";
-      position: absolute;
-      inset: -20px;
-      background-image:
-        url("imagen/cybergraphman-regenerado.png");
-      background-size: cover;
-      background-position: center;
-      filter: blur(18px) brightness(0.5);
-    }
-
-    /* Fotografía completa sobre el fondo */
 
     .portada {
-      position: relative;
-      z-index: 1;
       display: block;
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      object-position: center center;
+      object-fit: cover;
+
+      /* PRIORIZAR PARTE SUPERIOR DE LA FOTO */
+      object-position: center 15%;
     }
 
-    /* CONTENIDO */
+    /* CONTENIDO PRINCIPAL */
 
     main {
+      width: 100%;
       padding: 30px 20px;
     }
 
-    /* REPRODUCTOR MP3 */
+    main h2 {
+      color: #ffffff;
+    }
+
+    /* REPRODUCTOR DE AUDIO */
 
     .audio-section {
+      width: 100%;
       padding: 20px 20px 50px;
       text-align: center;
     }
@@ -111,7 +104,15 @@
       margin: 20px auto;
     }
 
-    /* VERSIÓN MÓVIL */
+    /* PIE DE PÁGINA */
+
+    footer {
+      padding: 15px;
+      color: #62798c;
+      font-size: 11px;
+    }
+
+    /* VERSIÓN PARA TELÉFONOS */
 
     @media (max-width: 767px) {
 
@@ -125,7 +126,11 @@
       }
 
       .contenedor-portada {
-        height: 220px;
+        height: 240px;
+      }
+
+      .portada {
+        object-position: 75% 15%;
       }
 
       main {
@@ -139,6 +144,7 @@
     }
 
   </style>
+
 </head>
 
 <body>
@@ -146,10 +152,13 @@
   <!-- ENCABEZADO -->
 
   <header>
+
     <h1>CYBERGRAPHMAN</h1>
+
     <p>
       Graphic Design | Cybersecurity | Quality Control
     </p>
+
   </header>
 
   <!-- PORTADA PANORÁMICA -->
@@ -158,18 +167,21 @@
 
     <img
       class="portada"
-      src="imagen/cybergraphman-regenerado.png"
+      src="imagen/cybergraphman-regenerado.png?v=3"
       alt="Cybergraphman - Centro de ciberseguridad">
 
   </div>
 
-  <!-- BIENVENIDA -->
+  <!-- CONTENIDO PRINCIPAL -->
 
   <main>
+
     <h2>Welcome to Cybergraphman</h2>
+
     <p>
       Documentation | Research | Education
     </p>
+
   </main>
 
   <!-- REPRODUCTOR MP3 -->
@@ -181,14 +193,22 @@
     <p>Official Audio Experience</p>
 
     <audio controls preload="metadata">
+
       <source
         src="audio/cybergraphman.mp3"
         type="audio/mpeg">
 
       Tu navegador no admite audio HTML5.
+
     </audio>
 
   </section>
+
+  <!-- IDENTIFICADOR DE VERSIÓN -->
+
+  <footer>
+    CYBERGRAPHMAN | Versión 3
+  </footer>
 
 </body>
 </html>
