@@ -21,9 +21,9 @@
 
     html,
     body {
-      width: 100%;
       margin: 0;
       padding: 0;
+      width: 100%;
     }
 
     body {
@@ -48,16 +48,19 @@
       letter-spacing: 3px;
     }
 
-    p {
+    header p {
       color: #b5c9dc;
     }
 
     /* PORTADA PANORÁMICA */
 
     .contenedor-portada {
+      display: block;
       position: relative;
       width: 100%;
       height: 350px;
+      margin: 0;
+      padding: 0;
       overflow: hidden;
       border-bottom: 1px solid #00bfff;
       background-color: #080d15;
@@ -69,11 +72,11 @@
       height: 100%;
       object-fit: cover;
 
-      /* PRIORIZAR PARTE SUPERIOR DE LA FOTO */
-      object-position: center 15%;
+      /* PRIORIZA LA PARTE SUPERIOR */
+      object-position: center top;
     }
 
-    /* CONTENIDO PRINCIPAL */
+    /* BIENVENIDA */
 
     main {
       width: 100%;
@@ -84,7 +87,11 @@
       color: #ffffff;
     }
 
-    /* REPRODUCTOR DE AUDIO */
+    main p {
+      color: #b5c9dc;
+    }
+
+    /* REPRODUCTOR MP3 */
 
     .audio-section {
       width: 100%;
@@ -97,19 +104,15 @@
       letter-spacing: 2px;
     }
 
+    .audio-section p {
+      color: #b5c9dc;
+    }
+
     .audio-section audio {
       display: block;
       width: 100%;
       max-width: 450px;
       margin: 20px auto;
-    }
-
-    /* PIE DE PÁGINA */
-
-    footer {
-      padding: 15px;
-      color: #62798c;
-      font-size: 11px;
     }
 
     /* VERSIÓN PARA TELÉFONOS */
@@ -126,11 +129,11 @@
       }
 
       .contenedor-portada {
-        height: 240px;
+        height: 260px;
       }
 
       .portada {
-        object-position: 75% 15%;
+        object-position: 75% top;
       }
 
       main {
@@ -167,12 +170,12 @@
 
     <img
       class="portada"
-      src="imagen/cybergraphman-regenerado.png?v=3"
+      src="imagen/cybergraphman-regenerado.png?v=4"
       alt="Cybergraphman - Centro de ciberseguridad">
 
   </div>
 
-  <!-- CONTENIDO PRINCIPAL -->
+  <!-- BIENVENIDA -->
 
   <main>
 
@@ -204,11 +207,6 @@
 
   </section>
 
-  <!-- IDENTIFICADOR DE VERSIÓN -->
-
-  <footer>
-    CYBERGRAPHMAN | Versión 3
-  </footer>
-
 </body>
+
 </html>
