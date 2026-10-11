@@ -34,9 +34,18 @@
 .portada {
   display: block;
   width: 100%;
-  height: auto;
+  height: 420px;
+  object-fit: cover;
+  object-position: center center;
   border-bottom: 1px solid #00bfff;
   box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .portada {
+    height: 280px;
+    object-position: 75% center;
+  }
 }
 
     main {
