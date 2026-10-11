@@ -31,7 +31,6 @@
       color: #b5c9dc;
     }
 
-
 .portada {
   display: block;
   width: 100%;
@@ -52,6 +51,24 @@
     main {
       padding: 30px 20px;
     }
+    
+.audio-section {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.audio-section h2 {
+  color: #00bfff;
+  letter-spacing: 2px;
+}
+
+.audio-section audio {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  margin: 20px auto;
+}
+
   </style>
 </head>
 
@@ -73,6 +90,18 @@
     <h2>Welcome to Cybergraphman</h2>
     <p>Documentation | Research | Education</p>
   </main>
+
+<section class="audio-section">
+  <h2>CYBERGRAPHMAN AUDIO</h2>
+  <p>Official Audio Experience</p>
+
+  <audio controls preload="metadata">
+    <source
+      src="audio/cybergraphman.mp3"
+      type="audio/mpeg">
+    Tu navegador no admite audio HTML5.
+  </audio>
+</section>
 
 </body>
 </html>
