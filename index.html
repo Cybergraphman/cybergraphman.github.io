@@ -284,6 +284,39 @@ body{background:#d6e0e4;min-height:100vh}
 }
 @container (max-width:640px){.siteheader::after{left:16px;right:16px}.siteheader .nav a{padding:7px 10px}}
 </style>
+<style>
+/* Lienzo continuo de ancho completo. Conserva los archiveros centrados. */
+html,body{width:100%;min-height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#e2ebee 0%,#dbe5e9 45%,#d2dee3 100%);
+}
+.site{
+  width:100%;
+  max-width:none;
+  margin:0;
+  box-shadow:none;
+}
+.siteheader{
+  width:100%;
+  padding-left:max(24px,calc((100% - 1100px)/2 + 36px));
+  padding-right:max(24px,calc((100% - 1100px)/2 + 36px));
+}
+.siteheader::after{
+  left:max(24px,calc((100% - 1100px)/2 + 36px));
+  right:max(24px,calc((100% - 1100px)/2 + 36px));
+}
+.sitebody{
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+  background:transparent;
+}
+@container (max-width:640px){
+  .siteheader{padding-left:16px;padding-right:16px}
+  .siteheader::after{left:16px;right:16px}
+}
+</style>
 </head>
 <body><div class="site">
 <header class="siteheader"><div class="logo">Cybergraphman</div><nav class="nav"><a href="#inicio">Inicio</a></nav></header>
